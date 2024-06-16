@@ -30,7 +30,6 @@ export default function Home() {
                         <h4>Protocolos e diretrizes orientam o desenvolvimento de tecnologias acessíveis, mas é preciso
                             olhar para além de tudo isso</h4>
                     </header>
-
                     <p>Acessibilidade se tornou uma tendência no ecossistema tecnológico mundial, diversas empresas
                         passaram a adotar critérios de desenvolvimento acessível em seus projetos — por uma questão
                         prática ou por exigências legais —, no entanto, ainda faltam recursos e consciência do que de
@@ -47,7 +46,7 @@ export default function Home() {
             <footer className={styles.header}>
                 <Image src={LogoImg} width={286 / 2}/>
 
-                <nav className={styles.nav} aria-label="Rodape">
+                <nav className={styles.nav} aria-label="Rodapé">
                     <a href="https://github.com/navestelar">
                         Termos de uso
                     </a>
