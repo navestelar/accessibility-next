@@ -7,6 +7,9 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Desenvolvendo uma web acessível | Rocketseat blog</title>
+            </Head>
             <header className={styles.header}>
                 <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
@@ -25,10 +28,10 @@ export default function Home() {
             <main>
                 <article className={styles.content}>
                     <header>
-                        <h2>Desenvolvendo uma web acessível</h2>
+                        <h1>Desenvolvendo uma web acessível</h1>
 
-                        <h4>Protocolos e diretrizes orientam o desenvolvimento de tecnologias acessíveis, mas é preciso
-                            olhar para além de tudo isso</h4>
+                        <h2>Protocolos e diretrizes orientam o desenvolvimento de tecnologias acessíveis, mas é preciso
+                            olhar para além de tudo isso</h2>
                     </header>
                     <p>Acessibilidade se tornou uma tendência no ecossistema tecnológico mundial, diversas empresas
                         passaram a adotar critérios de desenvolvimento acessível em seus projetos — por uma questão
@@ -39,7 +42,7 @@ export default function Home() {
                         tendência) para o ecossistema tech e não como filosofia natural daquilo que condiz com os
                         princípios básicos da web: acessível para humanos. Tal afirmação está na W3C.</p>
 
-                    <h3>O que é acessibilidade, afinal?</h3>
+                    <h2>O que é acessibilidade, afinal?</h2>
                 </article>
             </main>
 
