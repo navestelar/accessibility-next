@@ -8,10 +8,10 @@ export default function Home() {
     return (
         <>
             <header className={styles.header}>
-                <Image src={LogoImg} width={286 / 2}/>
+                <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
                 <nav className={styles.nav}>
-                    <a href="https://github.com/navestelar">
+                    <a href="https://github.com/navestelar" aria-label="Acessar o github" >
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="28"
                              width="28" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -44,7 +44,7 @@ export default function Home() {
             </main>
 
             <footer className={styles.header}>
-                <Image src={LogoImg} width={286 / 2}/>
+                <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
                 <nav className={styles.nav} aria-label="Rodapé">
                     <a href="https://github.com/navestelar">
