@@ -16,7 +16,6 @@
     max-width: 776px;
     width: 100%;
     margin: 0 auto;
-    color: #555;
 }
 
 .content h2 {
@@ -25,4 +24,22 @@
 
 .content p {
     margin: 20px 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1064px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.footer a {
+    padding: 1rem 2rem;
+    background-color: #202024;
+    border-radius: 5px;
+
+    color: #996bff;
 }
