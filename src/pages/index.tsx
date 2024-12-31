@@ -3,8 +3,21 @@ import Image from "next/image"
 import  LogoImg from '../assets/logo.svg'
 
 import styles from '../styles/Home.module.css'
+import {useEffect, useRef, useState} from "react";
 
 export default function Home() {
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const modalRef = useRef<HTMLDivElement>(null)
+
+    function handleModalOpen() {
+        setIsModalOpen(true)
+    }
+
+    useEffect(() => {
+        if (isModalOpen) {
+            modalRef?.current?.focus()
+        }
+    }, [isModalOpen])
     return (
         <>
             <Head>
@@ -49,12 +62,27 @@ export default function Home() {
             <footer className={styles.footer}>
                 <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
-                <nav className={styles.nav} aria-label="Rodapé">
-                    <a href="https://github.com/navestelar">
+                <nav className={styles.nav} aria-label="Rodapé" aria-controls='modal1'>
+                    <button type='button' onClick={handleModalOpen}>
                         Termos de uso
-                    </a>
+                    </button>
                 </nav>
             </footer>
+
+            {isModalOpen && (
+                <div
+                    id='modal1'
+                    className={styles.modal}
+                    role='dialog'
+                    aria-labelledby='modal1Title'
+                    aria-describedby='modal1Description'
+                    ref={modalRef}
+                    tabIndex={-1} // Impede que o modal seja focado através do teclado
+                >
+                    <h2 id='modal1Title'>Termos de uso</h2>
+                    <p id='modal1Description'>Esses são os termos de uso</p>
+                </div>
+            )}
         </>
     )
 }
